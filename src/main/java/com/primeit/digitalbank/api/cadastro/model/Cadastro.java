@@ -131,4 +131,5 @@ public class Cadastro {
 	public void setIdUsr(Integer idUsr) {
 		this.idUsr = idUsr;
 	}
+	//comentários para exemplo no git
 }
