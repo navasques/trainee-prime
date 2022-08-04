@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//teste commit
 @Entity
 @Table(name = "cadastro")
 public class Cadastro {
