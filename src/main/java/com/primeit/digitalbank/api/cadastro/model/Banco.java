@@ -23,6 +23,38 @@ public class Banco {
 		this.codigo = codigo;
 		this.visivel = visivel;
 	}
+
+	public int getIdBc() {
+		return idBc;
+	}
+
+	public void setIdBc(int idBc) {
+		this.idBc = idBc;
+	}
+
+	public String getBanco() {
+		return banco;
+	}
+
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public int getVisivel() {
+		return visivel;
+	}
+
+	public void setVisivel(int visivel) {
+		this.visivel = visivel;
+	}
 	
 	
 	
