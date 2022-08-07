@@ -11,14 +11,19 @@ import java.util.List;
 @Service
 @Transactional
 public class CadastroService {
-	@Autowired
+	
+	@Autowired(required = true)
 	private CadastroRepository cadastroRepository;
 	
 	public void saveCadastro(Cadastro cadastro) {
 		cadastroRepository.save(cadastro);
 	}
 	
-	public Cadastro getCadastro(Integer idCad) {
-		return cadastroRepository.findById(idCad).get();
+	public Cadastro getCadastro(String cpf) {
+		return cadastroRepository.findByCpf(cpf);
+	}
+
+	public List<Cadastro> getAll() {
+		return cadastroRepository.findAll();
 	}
 }

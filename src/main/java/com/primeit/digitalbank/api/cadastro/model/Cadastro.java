@@ -11,6 +11,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "cadastro")
 public class Cadastro {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCad;
 	private String cpf;
 	private String senha;
@@ -41,16 +44,23 @@ public class Cadastro {
 		this.idUsr = idUsr;
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int getId() {
+	
+	
+	public int getIdCad() {
 		return idCad;
 	}
 
-	public void setId(Integer idCad) {
-		// TODO Auto-generated method stub
+	public void setIdCad(int idCad) {
 		this.idCad = idCad;
 	}
+
+	
+	/*
+	 * public int getId() { return idCad; }
+	 * 
+	 * public void setId(Integer idCad) { // TODO Auto-generated method stub
+	 * this.idCad = idCad; }
+	 */
 	
 	public String getCpf() {
 		return cpf;
