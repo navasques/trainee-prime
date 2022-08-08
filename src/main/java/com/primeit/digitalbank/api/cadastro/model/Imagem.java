@@ -16,4 +16,19 @@ public class Imagem {
 	private boolean verso;
 	private Timestamp dtCriacao;
 	
+	public Imagem() {
+	
+	}
+
+	public Imagem(int idImg, int idCad, String tipo, boolean frente, boolean verso, Timestamp dtCriacao) {
+		this.idImg = idImg;
+		this.idCad = idCad;
+		this.tipo = tipo;
+		this.frente = frente;
+		this.verso = verso;
+		this.dtCriacao = dtCriacao;
+	}
+	
+	
+	
 }
