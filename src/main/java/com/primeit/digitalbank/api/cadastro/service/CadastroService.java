@@ -19,8 +19,8 @@ public class CadastroService {
 		cadastroRepository.save(cadastro);
 	}
 	
-	public Cadastro getCadastro(String cpf) {
-		return cadastroRepository.findByCpf(cpf);
+	public Cadastro getCadastro(Integer idcad) {
+		return cadastroRepository.findById(idcad).get();
 	}
 
 	public List<Cadastro> getAll() {

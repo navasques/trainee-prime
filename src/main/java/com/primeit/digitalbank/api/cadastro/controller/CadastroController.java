@@ -23,10 +23,10 @@ public class CadastroController {
 	@Autowired
 	CadastroService cadastroService;
 
-	@GetMapping("/{cpf}")
-	public ResponseEntity<Cadastro> get(@PathVariable String cpf) {
+	@GetMapping("/{idcad}")
+	public ResponseEntity<Cadastro> get(@PathVariable Integer idcad) {
 		try {
-			Cadastro cadastro = cadastroService.getCadastro(cpf);
+			Cadastro cadastro = cadastroService.getCadastro(idcad);
 			return new ResponseEntity<Cadastro>(cadastro, HttpStatus.OK);
 		} catch (NoSuchElementException e) {
 			return new ResponseEntity<Cadastro>(HttpStatus.NOT_FOUND);
@@ -49,10 +49,10 @@ public class CadastroController {
 	}
 
 	@PutMapping("/{idCad}")
-	public ResponseEntity<?> update(@RequestBody Cadastro cadastro, @PathVariable String cpf) {
+	public ResponseEntity<?> update(@RequestBody Cadastro cadastro, @PathVariable Integer idCad) {
 		try {
-			Cadastro existCadastro = cadastroService.getCadastro(cpf);
-			cadastro.setCpf(cpf);
+			Cadastro existCadastro = cadastroService.getCadastro(idCad);
+			cadastro.setIdcad(idCad);
 			cadastroService.saveCadastro(cadastro);
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (NoSuchElementException e) {
