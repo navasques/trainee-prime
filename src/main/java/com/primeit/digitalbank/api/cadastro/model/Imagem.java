@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cadastro")
+@Table(name = "imagem")
 public class Imagem {
 
 	private int idImg;
