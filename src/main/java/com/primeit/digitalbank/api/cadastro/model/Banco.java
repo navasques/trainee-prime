@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cadastro")
+@Table(name = "banco")
 public class Banco {
 	
 	private int idBc;
