@@ -8,128 +8,132 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//teste 2
+
 @Entity
 @Table(name = "cadastro")
 public class Cadastro {
-	private int idCad;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idcad;
 	private String cpf;
 	private String senha;
 	private int status;
 	private String nome;
-	private String sobreNome;
-	private Timestamp dtNasc;
+	private String sobrenome;
+	private Timestamp dtnasc;
 	private String telefone;
 	private String email;
-	private Timestamp dtCriacao;
-	private int idUsr;
-	
+	private Timestamp dtcriacao;
+	private int idusr;
+
 	public Cadastro() {
-		
+
 	}
-	
-	public Cadastro(int idCad, String cpf, String senha, int status, String nome, String sobreNome, Timestamp dtNasc, String telefone, String email, Timestamp dtCriacao, int idUsr) {
-		this.idCad = idCad;
+
+	public Cadastro(int idcad, String cpf, String senha, int status, String nome, String sobrenome, Timestamp dtnasc,
+			String telefone, String email, Timestamp dtcriacao, int idusr) {
+		this.idcad = idcad;
 		this.cpf = cpf;
 		this.senha = senha;
 		this.status = status;
 		this.nome = nome;
-		this.sobreNome = sobreNome;
-		this.dtNasc = dtNasc;
+		this.sobrenome = sobrenome;
+		this.dtnasc = dtnasc;
 		this.telefone = telefone;
 		this.email = email;
-		this.dtCriacao = dtCriacao;
-		this.idUsr = idUsr;
-	}
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int getId() {
-		return idCad;
+		this.dtcriacao = dtcriacao;
+		this.idusr = idusr;
 	}
 
-	public void setId(Integer idCad) {
-		// TODO Auto-generated method stub
-		this.idCad = idCad;
+	public int getIdcad() {
+		return idcad;
 	}
-	
+
+	public void setIdcad(int idcad) {
+		this.idcad = idcad;
+	}
+
 	public String getCpf() {
 		return cpf;
 	}
-	
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	
+
 	public String getSenha() {
 		return senha;
 	}
-	
+
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
+
 	public int getStatus() {
 		return status;
 	}
-	
-	public void setStatus(Integer status) {
+
+	public void setStatus(int status) {
 		this.status = status;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getSobrenome() {
-		return sobreNome;
+		return sobrenome;
 	}
-	
-	public void setSobrenome(String sobreNome) {
-		this.sobreNome = sobreNome;
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
 	}
-	
-	public Timestamp getDtNasc() {
-		return dtNasc;
+
+	public Timestamp getDtnasc() {
+		return dtnasc;
 	}
-	
-	public void setDtNasc(Timestamp dtNasc) {
-		this.dtNasc = dtNasc;
+
+	public void setDtnasc(Timestamp dtnasc) {
+		this.dtnasc = dtnasc;
 	}
-	
+
 	public String getTelefone() {
 		return telefone;
 	}
-	
+
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	public Timestamp getDtCriacao() {
-		return dtCriacao;
+
+	public Timestamp getDtcriacao() {
+		return dtcriacao;
 	}
-	
-	public void setDtCriacao(Timestamp dtCriacao) {
-		this.dtCriacao = dtCriacao;
+
+	public void setDtcriacao(Timestamp dtcriacao) {
+		this.dtcriacao = dtcriacao;
 	}
-	
-	public Integer getIdUsr() {
-		return idUsr;
+
+	public int getIdusr() {
+		return idusr;
 	}
-	
-	public void setIdUsr(Integer idUsr) {
-		this.idUsr = idUsr;
+
+	public void setIdusr(int idusr) {
+		this.idusr = idusr;
 	}
-	//comentários para exemplo no git
+
+	// comentários para exemplo no git
 }
